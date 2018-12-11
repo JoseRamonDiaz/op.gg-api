@@ -22,7 +22,7 @@ app.param('region', (req,res,next,id) => {
 })
 
 app.param('summoner', (req,res,next,id) => {
-  if (!validate.Summoner(req.params.summoner)) {
+  if (!validate.SummonerName(req.params.summoner)) {
     response.Error(res, new Error(errorMessages.INVALID_PARAM_SUMMONER_NAME, responseCodes.BAD_REQUEST))
     return
   }
@@ -137,7 +137,7 @@ app.use((req, res, next) => {
 		{
 			shouldValidate: 'summoner' in req.query && utils.IsEndpoint('/:region/match/:gameId', req.path),
 			querystring: 'summoner',
-			function: validate.Summoner,
+			function: validate.SummonerName,
 			error: errorMessages.INVALID_PARAM_SUMMONER_NAME,
 			code: responseCodes.BAD_REQUEST
 		},

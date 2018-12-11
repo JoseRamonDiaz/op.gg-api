@@ -25,5 +25,6 @@
 	"MISSING_PARAM_REGION": "Region parameter is missing.",
 	"MISSING_PARAM_GENERIC": "An expected parameter is missing.",
 	"NO_RESULTS": "The request was made, but returned no results.",
-	"SERVICE_UNAVAILABLE": "The requested service is unavailable. It is either down or slow to respond."
+	"SERVICE_UNAVAILABLE": "The requested service is unavailable. It is either down or slow to respond.",
+	"IM_A_TEAPOT": "Just updated, wait a minute and try again"
 }
